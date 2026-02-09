@@ -1,0 +1,12 @@
+img{
+    width: 250px;
+    height: auto;
+}
+.divInicio{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+}
