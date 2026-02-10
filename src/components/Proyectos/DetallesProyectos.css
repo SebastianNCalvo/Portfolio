@@ -1,6 +1,7 @@
 .divDetallesProyectos{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
     align-items: center;
@@ -8,7 +9,8 @@
     margin-bottom: 1rem;
 }
 .divDeProyectos{
-    width: 70%;
+    width: 40%;
+    height: 250px;
     display: flex;
     align-content: center;
     justify-content: space-around;
@@ -19,6 +21,6 @@
 }
 
 .imgProyectos{
-    width: 180px;
+    width: 150px;
     height: auto;
 }

@@ -9,17 +9,17 @@
     position: fixed;
     top: 0;
 }
-h3{
+h2{
     color: #708090;
     width: 100%;
 }
-h3:hover{
+h2:hover{
     color: #F0E68C;
 }
 .active {
     background-color: #ddf0ce;
 }
-.active h3 {
+.active h2 {
     color: #000000;
 }
 

@@ -1,11 +1,11 @@
 import './Inicio.css'
-import descarga from '../../assets/descarga.jpg'
+import fotoLinkedin from '../../assets/perfilLinkedin2.png'
 
 export default function Inicio(){
     return(
         <div className="divInicio">
             <div className='divInicioIzquierdo'>
-                <img src={descarga} alt="" />
+                <img src={fotoLinkedin} alt="" />
             </div>
             <div className='divInicioDerecho'>
                 <h1>¡Bienvenidos!</h1>
