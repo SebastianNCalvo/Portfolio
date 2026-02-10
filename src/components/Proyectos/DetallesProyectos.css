@@ -1,4 +1,4 @@
-.divDetallesProyectos{
+.divPresentaciónProyectos{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -6,23 +6,47 @@
     justify-content: space-around;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
-.divDeProyectos{
+
+.divDetallesProyectosEnConjunto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.divDeProyectosIndividual{
     width: 40%;
-    height: auto;
+    height: 60vh;
     display: flex;
     align-content: center;
     justify-content: space-around;
     align-items: center;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 0.75rem;
+    padding: 0.5rem;
+    margin: 10px;
 }
 
 .imgProyectos{
     width: 150px;
     height: auto;
+}
+
+a{
+    color: black;
+    text-decoration:solid;
+}
+a:hover{
+    color: black;
+    animation: none;
+}
+
+button:hover{
+    background-color: #f5ffca;
 }
 
 .tecnologias-container{
@@ -66,7 +90,7 @@
 }
 
 #CSS{
-    background-color: #264ce4;
+    background-color: #4668f0;
 }
 
 #JavaScript{

@@ -16,11 +16,11 @@ export default function DetallesProyecto(){
     let proyectos = variableProyectos
 
     return(
-        <div className="divDetallesProyectos">
+        <div className="divDetallesProyectosEnConjunto">
             {
                 proyectos.map(proyecto =>{
                     return(
-                        <div className="divDeProyectos" key={proyecto.id}>
+                        <div className="divDeProyectosIndividual" key={proyecto.id}>
                             <div>
                                 <img src={proyecto.image} alt="" className="imgProyectos"/>
                             </div>

@@ -34,7 +34,7 @@ export const variableProyectos =
         "image":`${elementalSoul}`,
         "name": "Elemental Soul",
         "description": "Elemental Soul es un RPG de combate táctico por turnos desarrollado íntegramente como una exhibición de lógica de programación y diseño de interfaces.",
-        "link": "https://distribuidora-de-la-costa-react-6675-pr602qvxk.vercel.app/",
+        "link": "https://sebastianncalvo.github.io/Elemental_Soul/",
         "technologies": [ "HTML", "CSS","JavaScript", "GitHub"]
     },
     {

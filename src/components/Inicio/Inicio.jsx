@@ -9,7 +9,7 @@ export default function Inicio(){
             </div>
             <div className='divInicioDerecho'>
                 <h1>¡Bienvenidos!</h1>
-                <h2>🚀 Full Stack Developer | Transformando ideas en productos digitales</h2>
+                <h3>🚀 Full Stack Developer | Transformando ideas en productos digitales</h3>
                 <p>"No solo escribo código; construyo soluciones web innovadoras, escalables y centradas en el usuario."</p>
             </div>
         </div>
