@@ -10,7 +10,7 @@
 }
 .divDeProyectos{
     width: 40%;
-    height: 250px;
+    height: auto;
     display: flex;
     align-content: center;
     justify-content: space-around;
@@ -23,4 +23,68 @@
 .imgProyectos{
     width: 150px;
     height: auto;
+}
+
+.tecnologias-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tech-badge{
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.tech-badge:hover{
+    background-color: #e0e0e0;
+    border-color: #999;
+    transform: translateY(-2px);
+}
+
+.tech-icon{
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#HTML{
+    background-color: #E34F26;
+}
+
+#CSS{
+    background-color: #264ce4;
+}
+
+#JavaScript{
+    background-color: #F7DF1E;
+}
+
+#React{
+    background-color: #61DBFB;
+}
+
+#GitHub{
+    background-color: #211f1f8f;
+}
+
+#Firebase{
+    background-color: #FFA611;
+}
+
+#Vercel{
+    background-color: #17171756;
 }
