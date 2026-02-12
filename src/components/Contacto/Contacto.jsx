@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Swal from "sweetalert2"
 
 export default function Contacto(){
     const [formData, setFormData] = useState({
@@ -13,6 +14,12 @@ export default function Contacto(){
         e.preventDefault()
         setFormData({nombre:"", email:"", asunto:"", comentario: ""})
         console.log('Enviar formulario:', formData)
+        Swal.fire({
+            text:"¡Mensaje enviado con exito!",
+            background:'#ddf0ce',
+            timer: 1300,
+            showConfirmButton:false
+        })
     }
 
     return(
@@ -20,7 +27,7 @@ export default function Contacto(){
             <h3>¡Pongamonos en contacto!</h3>
             <p>Dejame tu consulta y en la brevedad estaré respondiendo tu mensaje</p>
             <p>Escríbeme a través del formulario; leo cada mensaje personalmente y te daré una respuesta a la brevedad para que podamos coordinar una llamada o reunión.</p>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} id="formContacto">
 
                 <label htmlFor="nombre">Nombre y apellido
                     <input 
@@ -63,8 +70,7 @@ export default function Contacto(){
                     required/>
                 </label>
 
-                <button type="submit" >Enviar</button>
-
+                <button type="submit">Enviar</button>
             </form>
         </div>
     )
