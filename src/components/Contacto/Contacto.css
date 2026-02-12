@@ -1,3 +1,14 @@
 #formContacto{
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#labelConTextarea{
+    display: flex;
+    align-items: center;
+}
+
+button{
+    background-color: #909c87;
 }
