@@ -1,18 +1,77 @@
-.divSobreMi{
+.seccionSobreMi {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem 1rem;
+    text-align: left; /* Texto alineado a la izquierda para mejor lectura */
+}
+
+.contenedorTexto h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.introTexto {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.introTexto strong {
+    color: var(--primary-color);
+}
+
+.formacionContenedor h2 {
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Grilla de Certificaciones */
+.divImagenesCertificaciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive automático */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cardCertificado {
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    transition: var(--transition);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
 }
 
-.divImagenesCertificaciones{
-    display: flex;
-    flex-direction: row;
+.cardCertificado:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+.cardCertificado img {
     width: 100%;
-    justify-content: space-around;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
 }
 
-img:hover{
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+.cardCertificado span {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Mobile-First: En pantallas pequeñas 1 sola columna */
+@media (max-width: 600px) {
+    .contenedorTexto h1 {
+        text-align: center;
+    }
+    .introTexto {
+        font-size: 1rem;
+    }
 }

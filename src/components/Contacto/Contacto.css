@@ -1,15 +1,115 @@
-#formContacto{
+.seccionContacto {
+    width: 100%;
+    max-width: 800px; /* Evitamos que el formulario sea demasiado ancho */
+    margin: 0 auto;
+    padding: 2rem 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
 }
 
-#labelConTextarea{
-    display: flex;
-    align-items: center;
+.headerContacto {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-button{
-    background-color: #909c87;
+.headerContacto p {
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 1. La Tarjeta del Formulario */
+.formCard {
+    background-color: var(--bg-light);
+    width: 100%;
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.5);
+}
+
+/* 2. Estilo de los Grupos de Input */
+.grupoInput {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.grupoInput label {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* 3. Reset de Inputs y Textareas para evitar estilos nativos */
+.grupoInput input, 
+.grupoInput select, 
+.grupoInput textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: var(--bg-dark); /* Fondo oscuro consistente */
+    border: 1px solid rgba(136, 146, 176, 0.3);
+    border-radius: 4px;
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+    outline: none;
+}
+
+/* Evitar que el select se vea blanco en algunos navegadores */
+.grupoInput select option {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+}
+
+.grupoInput input:focus, 
+.grupoInput select:focus, 
+.grupoInput textarea:focus {
+    border-color: var(--primary-color);
+    background-color: rgba(100, 255, 218, 0.05);
+}
+
+/* 4. Estilo específico para el Textarea */
+.grupoInput textarea {
+    min-height: 150px;
+    resize: vertical; /* Permite al usuario estirar hacia abajo pero no hacia los lados */
+}
+
+/* 5. Botón de Envío */
+.btnEnviar {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btnEnviar:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1);
+}
+
+/* 6. Responsive */
+@media (max-width: 600px) {
+    .formCard {
+        padding: 1.5rem;
+    }
     
+    .seccionContacto h2 {
+        font-size: 1.8rem;
+    }
 }

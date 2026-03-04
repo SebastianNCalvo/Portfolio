@@ -1,114 +1,163 @@
-.divPresentaciónProyectos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 60px;
-    margin-bottom: 60px;
+/* 1. Contenedor de la Página (Proyectos.jsx) */
+.divPresentaciónProyectos {
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.divDetallesProyectosEnConjunto{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.divDeProyectosIndividual{
-    width: 40%;
-    height: 70vh;
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 0.5rem;
-    margin: 10px;
+.divPresentaciónProyectos h1 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
 }
 
-.imgProyectos{
-    width: 150px;
-    height: auto;
+/* 2. Grilla de Proyectos */
+.divDetallesProyectosEnConjunto {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  width: 100%;
 }
 
-a{
-    color: black;
-    text-decoration:solid;
-}
-a:hover{
-    color: black;
-    animation: none;
-}
-
-button:hover{
-    background-color: #f5ffca;
-}
-
-.tecnologias-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
+/* 3. Card Individual */
+.divDeProyectosIndividual {
+  background-color: var(--bg-light);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column; 
+  gap: 1.5rem;
+  transition: var(--transition);
+  height: auto;
 }
 
-.tech-badge{
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    padding: 0.4rem 0.8rem;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #333;
-    transition: all 0.2s ease;
+.divDeProyectosIndividual:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
 }
 
-.tech-badge:hover{
-    background-color: #e0e0e0;
-    border-color: #999;
-    transform: translateY(-2px);
+/* 4. Contenedores de contenido */
+.contenedorImagenProyecto {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra la imagen si el contenedor es alto */
 }
 
-.tech-icon{
-    width: 18px;
-    height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.imgProyectos {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.05);
 }
 
-#HTML{
-    background-color: #E34F26;
+.contenedorInfoProyecto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Distribuye el texto uniformemente */
 }
 
-#CSS{
-    background-color: #4668f0;
+/* 5. Textos y Botones */
+.contenedorInfoProyecto h3 {
+  color: var(--text-main);
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  text-align: left;
 }
 
-#JavaScript{
-    background-color: #F7DF1E;
+.contenedorInfoProyecto p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  text-align: left;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
 }
 
-#React{
-    background-color: #61DBFB;
+.accionesProyecto {
+  text-align: left;
 }
 
-#GitHub{
-    background-color: #211f1f8f;
+.btnVisitar {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  margin-bottom: 1.5rem;
 }
 
-#Firebase{
-    background-color: #FFA611;
+.btnVisitar:hover {
+  background-color: rgba(100, 255, 218, 0.1);
 }
 
-#Vercel{
-    background-color: #17171756;
+/* 6. Tecnologías (Badges) */
+.seccionTecnologias {
+  text-align: left;
+}
+
+.seccionTecnologias h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-main);
+}
+
+.tecnologias-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: flex-start;
+}
+
+.tech-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  filter: saturate(0.8);
+}
+
+/* Colores de marca */
+#HTML { background-color: #E34F26; }
+#CSS { background-color: #1572B6; }
+#JavaScript { background-color: #F7DF1E; color: #000; }
+#React { background-color: #61DAFB; color: #000; }
+#GitHub { background-color: #333; }
+#Firebase { background-color: #FFCA28; color: #000; }
+#Vercel { background-color: #000; border: 1px solid #444; }
+#Supabase { background-color: #3ECF8E; color: #000; }
+
+/* 7. Desktop Queries */
+@media (min-width: 1024px) {
+  .divDeProyectosIndividual {
+    flex-direction: row; 
+    align-items: center; /* CENTRADO VERTICAL: Elimina el espacio vacío abajo de la imagen */
+    padding: 2.5rem;
+    gap: 3rem;
+  }
+  
+  .contenedorImagenProyecto {
+    flex: 1;
+  }
+
+  .contenedorInfoProyecto {
+    flex: 1.5;
+  }
+
+  .imgProyectos {
+    max-width: 350px; /* Un poco más de presencia en desktop */
+  }
 }

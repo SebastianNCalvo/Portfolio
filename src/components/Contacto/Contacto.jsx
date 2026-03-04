@@ -2,75 +2,101 @@ import { useState } from "react"
 import Swal from "sweetalert2"
 import './Contacto.css'
 
-export default function Contacto(){
+export default function Contacto() {
     const [formData, setFormData] = useState({
-        nombre:"", email:"", asunto:"", comentario: ""
+        nombre: "", email: "", asunto: "", comentario: ""
     })
 
-    function handleInputChange(e){
+    function handleInputChange(e) {
         const { name, value } = e.target
         setFormData(prev => ({ ...prev, [name]: value }))
     }
-    function handleSubmit(e){
+
+    function handleSubmit(e) {
         e.preventDefault()
-        setFormData({nombre:"", email:"", asunto:"", comentario: ""})
+        // Aquí podrías integrar un servicio como EmailJS en el futuro
         console.log('Enviar formulario:', formData)
+        
         Swal.fire({
-            text:"¡Mensaje enviado con exito!",
-            background:'#ddf0ce',
-            timer: 1300,
-            showConfirmButton:false
+            title: '¡Mensaje enviado!',
+            text: "Te responderé a la brevedad.",
+            icon: 'success',
+            background: '#112240', // --bg-light
+            color: '#ccd6f6',      // --text-main
+            confirmButtonColor: '#64ffda', // --primary-color
+            timer: 2500
         })
+
+        setFormData({ nombre: "", email: "", asunto: "", comentario: "" })
     }
 
-    return(
-        <div>
-            <h3>¡Pongamonos en contacto!</h3>
-            <p>Dejame tu consulta y en la brevedad estaré respondiendo tu mensaje</p>
-            <p>Escríbeme a través del formulario; leo cada mensaje personalmente y te daré una respuesta a la brevedad para que podamos coordinar una llamada o reunión.</p>
-            <form onSubmit={handleSubmit} id="formContacto">
+    return (
+        <section className="seccionContacto">
+            <div className="headerContacto">
+                <h2>¡Pongámonos en contacto!</h2>
+                <p>
+                    Escríbeme a través del formulario; leo cada mensaje personalmente y te daré 
+                    una respuesta a la brevedad para que podamos coordinar una llamada o reunión.
+                </p>
+            </div>
 
-                <label htmlFor="nombre">Nombre y apellido: 
-                    <input 
-                    id="nombre"
-                    name="nombre"
-                    value={formData.nombre}
-                    onChange={handleInputChange}
-                    type="text"
-                    placeholder="Juan Manuel"
-                    required/>
-                </label>
+            <form onSubmit={handleSubmit} id="formContacto" className="formCard">
+                <div className="grupoInput">
+                    <label htmlFor="nombre">Nombre y apellido</label>
+                    <input
+                        id="nombre"
+                        name="nombre"
+                        value={formData.nombre}
+                        onChange={handleInputChange}
+                        type="text"
+                        placeholder="Juan Manuel"
+                        required
+                    />
+                </div>
 
-                <label htmlFor="email">Email: 
-                    <input 
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    type="email"
-                    placeholder="example@example.com"
-                    required/>
-                </label>
-                <label htmlFor="asunto">Asunto:
-                    <select  id="asunto" name="asunto" value={formData.asunto} onChange={handleInputChange} placeholder="Selecciona una opción" required>
-                        <option>--Selecioná un opción--</option>
-                        <option>Presupuesto</option>                    
-                        <option>Puesto laboral</option>
+                <div className="grupoInput">
+                    <label htmlFor="email">Email</label>
+                    <input
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        type="email"
+                        placeholder="example@example.com"
+                        required
+                    />
+                </div>
+
+                <div className="grupoInput">
+                    <label htmlFor="asunto">Asunto</label>
+                    <select
+                        id="asunto"
+                        name="asunto"
+                        value={formData.asunto}
+                        onChange={handleInputChange}
+                        required
+                    >
+                        <option value="" disabled>-- Seleccioná una opción --</option>
+                        <option value="Presupuesto">Presupuesto</option>
+                        <option value="Puesto laboral">Puesto laboral</option>
+                        <option value="Otro">Otro</option>
                     </select>
-                </label>
+                </div>
 
-                <label htmlFor="comentario" id="labelConTextarea">Comentario: 
-                    <textarea name="comentario" id="comentario"
-                    type="text"
-                    value={formData.comentario}
-                    onChange={handleInputChange}
-                    placeholder="Escribíme tu consulta"
-                    required>
-                    </textarea>
-                </label>
+                <div className="grupoInput">
+                    <label htmlFor="comentario">Comentario</label>
+                    <textarea
+                        name="comentario"
+                        id="comentario"
+                        value={formData.comentario}
+                        onChange={handleInputChange}
+                        placeholder="Escríbeme tu consulta"
+                        required
+                    />
+                </div>
 
-                <button type="submit">Enviar</button>
+                <button type="submit" className="btnEnviar">Enviar mensaje</button>
             </form>
-        </div>
+        </section>
     )
 }

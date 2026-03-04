@@ -13,28 +13,36 @@ const iconMap = {
     Supabase: Icons.SiSupabase
 }
 
-export default function DetallesProyecto(){
-    let proyectos = variableProyectos
+export default function DetallesProyecto() {
+    // Usamos una constante para mayor claridad
+    const proyectos = variableProyectos;
 
-    return(
-        <div className="divDetallesProyectosEnConjunto">
-            {
-                proyectos.map(proyecto =>{
-                    return(
-                        <div className="divDeProyectosIndividual" key={proyecto.id}>
-                            <div>
-                                <img src={proyecto.image} alt="" className="imgProyectos"/>
+    return (
+        <section className="divDetallesProyectosEnConjunto">
+            {proyectos.map(proyecto => {
+                return (
+                    <article className="divDeProyectosIndividual" key={proyecto.id}>
+                        <div className="contenedorImagenProyecto">
+                            <img src={proyecto.image} alt={`Captura de pantalla de ${proyecto.name}`} className="imgProyectos" />
+                        </div>
+                        
+                        <div className="contenedorInfoProyecto">
+                            <h3>{proyecto.name}</h3>
+                            <p>{proyecto.description}</p>
+                            
+                            <div className="accionesProyecto">
+                                <a href={proyecto.link} target="_blank" rel="noopener noreferrer" className="btnVisitar">
+                                    Visitar Sitio
+                                </a>
                             </div>
-                            <div>
-                                <h4>{proyecto.name}</h4>
-                                <p>{proyecto.description}</p>
-                                <button><a href={proyecto.link}>Visitar Sitio</a></button>
-                                <h5>Tecnologias utilizadas:</h5>
+
+                            <div className="seccionTecnologias">
+                                <h4>Tecnologías utilizadas:</h4>
                                 <div className="tecnologias-container">
                                     {proyecto.technologies && proyecto.technologies.map((tech, index) => {
                                         const IconComponent = iconMap[tech];
                                         return (
-                                            <div key={index} className="tech-badge" id={tech}>
+                                            <div key={index} className="tech-badge" title={tech}>
                                                 {IconComponent && <IconComponent className="tech-icon" />}
                                                 <span>{tech}</span>
                                             </div>
@@ -43,9 +51,9 @@ export default function DetallesProyecto(){
                                 </div>
                             </div>
                         </div>
-                    )
-                })
-            }
-        </div>
+                    </article>
+                )
+            })}
+        </section>
     )
 }

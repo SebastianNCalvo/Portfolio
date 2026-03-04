@@ -1,10 +1,10 @@
-/* 1. Reset y Variables (El "sistema de coordenadas" de tu diseño) */
+/* 1. Reset y Variables */
 :root {
-  --primary-color: #64ffda;       /* Un turquesa profesional para detalles */
-  --bg-dark: #0a192f;            /* Azul marino profundo (Fondo) */
-  --bg-light: #112240;           /* Azul un poco más claro (Cards/Secciones) */
-  --text-main: #ccd6f6;          /* Blanco azulado suave */
-  --text-dim: #8892b0;           /* Gris para textos secundarios */
+  --primary-color: #64ffda;
+  --bg-dark: #0a192f;
+  --bg-light: #112240;
+  --text-main: #ccd6f6;
+  --text-dim: #8892b0;
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --transition: all 0.3s ease-in-out;
 }
@@ -34,15 +34,18 @@ body {
   width: 100%;
 }
 
-/* 2. Contenedor Principal (Layout Dinámico) */
+/* 2. Contenedor Principal Corregido */
 .contenedorPrincipal {
-  flex: 1; /* Empuja el footer hacia abajo */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* CAMBIO CLAVE: Cambiamos center por flex-start */
+  /* Esto evita que las tarjetas se "estiren" verticalmente para llenar la pantalla */
+  justify-content: flex-start; 
   width: 100%;
-  padding: 80px 20px; /* Espacio para el Navbar fijo */
+  /* Aumentamos el padding superior para que el contenido no quede pegado al Navbar */
+  padding: 120px 20px 60px 20px; 
   transition: var(--transition);
 }
 
@@ -51,40 +54,36 @@ h1, h2, h3 {
   color: var(--primary-color);
   margin-bottom: 1.5rem;
   font-weight: 700;
+  width: 100%; /* Asegura que el título ocupe su lugar y no flote raro */
+  text-align: center;
 }
 
 p {
-  max-width: 600px;
-  margin: 0 auto 1rem;
+  /* Eliminamos el max-width fijo de 600px aquí para que no restrinja 
+     el texto dentro de las tarjetas de proyectos, lo manejaremos por componente */
+  margin-bottom: 1rem;
   font-size: 1rem;
   color: var(--text-dim);
 }
 
-/* 4. Mobile-First (Base para celulares) */
+/* 4. Mobile-First */
 main {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* 5. Responsive: Tablets y Escritorio */
+/* 5. Responsive */
 @media (min-width: 768px) {
   .contenedorPrincipal {
-    padding: 100px 50px;
-  }
-
-  p {
-    font-size: 1.1rem;
+    padding: 140px 50px 80px 50px;
   }
 }
 
-@media (min-width: 1024px) {
-  .contenedorPrincipal {
-    padding: 120px 10% ;
-  }
-}
-
-/* 6. Utilidades para componentes */
+/* 6. Utilidades */
 .btn-primary {
   padding: 0.8rem 1.5rem;
   border: 1px solid var(--primary-color);
@@ -95,8 +94,10 @@ main {
   transition: var(--transition);
   text-decoration: none;
   display: inline-block;
+  text-align: center;
 }
 
 .btn-primary:hover {
   background: rgba(100, 255, 218, 0.1);
+  transform: translateY(-2px);
 }
