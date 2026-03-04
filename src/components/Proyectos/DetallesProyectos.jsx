@@ -9,7 +9,8 @@ const iconMap = {
     CSS: Icons.SiCss3,
     HTML: Icons.SiHtml5,
     Vercel: Icons.SiVercel,
-    GitHub: Icons.SiGithub
+    GitHub: Icons.SiGithub,
+    Supabase: Icons.SiSupabase
 }
 
 export default function DetallesProyecto(){

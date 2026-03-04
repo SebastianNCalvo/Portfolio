@@ -9,23 +9,18 @@ import Contacto from './components/Contacto/Contacto';
 
 export default function App() {
   return (
-    <>
-      <BrowserRouter>
-          <NavBar></NavBar>
-          <div className='contenedorPrincipal'>
-            <Routes>
-              <Route path='/' element={<Inicio></Inicio>}/>
-              <Route path='/sobremi' element={<SobreMi></SobreMi>}/>
-              <Route path='/proyectos' element={<Proyectos></Proyectos>}/>
-              <Route path='/contacto' element={<Contacto></Contacto>}/>
-              <Route path='*' element={<h2>404: Página no encontrada</h2>}/>
-            </Routes>
-          </div>
-
-          <Footer></Footer>
-      </BrowserRouter>
-
-
-    </>
-  )
+    <BrowserRouter>
+      <NavBar />
+      <main className='contenedorPrincipal'>
+        <Routes>
+          <Route path='/' element={<Inicio />} />
+          <Route path='/sobremi' element={<SobreMi />} />
+          <Route path='/proyectos' element={<Proyectos />} />
+          <Route path='/contacto' element={<Contacto />} />
+          <Route path='*' element={<h2>404: Página no encontrada</h2>} />
+        </Routes>
+      </main>
+      <Footer />
+    </BrowserRouter>
+  );
 }

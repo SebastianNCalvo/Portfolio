@@ -1,11 +1,41 @@
-.divFooter{
+.footer {
     width: 100%;
-    height: 45px;
-    background-color: #FFFFE0;
-    padding: 0.5rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    color: #708090;
+    background-color: #112240; /* Mismo tono que el NavBar Opción A */
+    padding: 1.5rem 1rem;
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+    margin-top: auto; /* Asegura que se pegue al final si hay poco contenido */
+}
+
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Mobile: Uno debajo del otro */
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer p {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin: 0; /* Reseteamos el margen del App.css */
+    letter-spacing: 0.5px;
+}
+
+.footerTagline {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Responsive: Escritorio */
+@media (min-width: 768px) {
+    .footerContent {
+        flex-direction: row; /* En desktop: en una sola línea */
+        justify-content: space-between;
+    }
+    
+    .footer p {
+        font-size: 0.9rem;
+    }
 }

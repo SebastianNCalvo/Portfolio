@@ -1,27 +1,102 @@
-#root {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+/* 1. Reset y Variables (El "sistema de coordenadas" de tu diseño) */
+:root {
+  --primary-color: #64ffda;       /* Un turquesa profesional para detalles */
+  --bg-dark: #0a192f;            /* Azul marino profundo (Fondo) */
+  --bg-light: #112240;           /* Azul un poco más claro (Cards/Secciones) */
+  --text-main: #ccd6f6;          /* Blanco azulado suave */
+  --text-dim: #8892b0;           /* Gris para textos secundarios */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --transition: all 0.3s ease-in-out;
 }
 
-
-main {
-  flex: 1;
-  padding: 2rem;
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.contenedorPrincipal{
-  background-color: #ddf0ce;
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+#root {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
   min-height: 100vh;
+  width: 100%;
+}
+
+/* 2. Contenedor Principal (Layout Dinámico) */
+.contenedorPrincipal {
+  flex: 1; /* Empuja el footer hacia abajo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 80px 20px; /* Espacio para el Navbar fijo */
+  transition: var(--transition);
+}
+
+/* 3. Tipografía y Estilos Globales */
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  font-size: 1rem;
+  color: var(--text-dim);
+}
+
+/* 4. Mobile-First (Base para celulares) */
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 5. Responsive: Tablets y Escritorio */
+@media (min-width: 768px) {
+  .contenedorPrincipal {
+    padding: 100px 50px;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenedorPrincipal {
+    padding: 120px 10% ;
+  }
+}
+
+/* 6. Utilidades para componentes */
+.btn-primary {
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: rgba(100, 255, 218, 0.1);
 }
