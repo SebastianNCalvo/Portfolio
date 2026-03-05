@@ -36,12 +36,5 @@ export const variableProyectos =
         "description": "Elemental Soul es un RPG de combate táctico por turnos desarrollado íntegramente como una exhibición de lógica de programación y diseño de interfaces.",
         "link": "https://sebastianncalvo.github.io/Elemental_Soul/",
         "technologies": [ "HTML", "CSS","JavaScript", "GitHub"]
-    },
-    {
-        "id":4,
-        "name": "Barba",
-        "description": "E-comerce para distibuidora. Renderiza el catálogo de artículos, los separa por categoria o producto especifico. Gestiona la realizacion de pedidos para mayor comodidad de los clientes.",
-        "link": "https://distribuidora-de-la-costa-react-6675-pr602qvxk.vercel.app/",
-        "technologies": ["React", "Firebase", "JavaScript"]
     }
 ]

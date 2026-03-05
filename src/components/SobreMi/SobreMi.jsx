@@ -1,7 +1,7 @@
 import './SobreMi.css'
 import DesarrolloWeb from '../../assets/DesarrolloWeb.png';
 import Javascript from '../../assets/Javascript.png';
-import ReactJs from '../../assets/ReactJs.png';
+import ReactJs from '../../assets/Certificado-ReactJs.png';
 import BDSQL from '../../assets/BDSQL.png';
 
 export default function SobreMi() {

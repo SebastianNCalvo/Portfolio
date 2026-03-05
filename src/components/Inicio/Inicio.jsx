@@ -18,10 +18,6 @@ export default function Inicio(){
                     "No solo escribo código; construyo soluciones web innovadoras, 
                     escalables y centradas en el usuario."
                 </p>
-                <div className="inicioAcciones">
-                    <a href="#proyectos" className="btn-primary">Ver Proyectos</a>
-                    <a href="#contacto" className="btn-secondary">Contactar</a>
-                </div>
             </div>
         </section>
     )
