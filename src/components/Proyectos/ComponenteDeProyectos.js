@@ -18,7 +18,7 @@ export const variableProyectos =
         "image":`${mundoBebe}`,
         "name": "Mundo Bebe",
         "description": "Sistema de gestión interna para control de ventas, stock y cambios. Optimiza la postventa mediante la generación automática de Notas de Crédito en PDF con detalles de artículos devueltos. Sus fortalezas radican en la trazabilidad total de operaciones de caja, registro histórico de vendedores y una interfaz intuitiva que agiliza la resolución de saldos a favor del cliente.",
-        "link": "https://mundo-bebe.vercel.app/",
+        "link": "https://dashboard-comercial-iota.vercel.app/",
         "technologies": ["HTML","CSS", "JavaScript","React","GitHub", "Supabase", "Vercel"]
     },
     {
