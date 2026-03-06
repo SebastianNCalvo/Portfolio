@@ -15,19 +15,19 @@ export const variableProyectos =
 [
     {
         "id":1,
-        "image":`${distribuidoraDeLaCosta}`,
-        "name": "Distribuidora de La Costa",
-        "description": "E-comerce para distibuidora. Renderiza el catálogo de artículos, los separa por categoria o producto especifico. Gestiona la realizacion de pedidos para mayor comodidad de los clientes, implementando Firebase como base de datos.",
-        "link": "https://distribuidora-de-la-costa-react-6675-pr602qvxk.vercel.app/",
-        "technologies": ["HTML","CSS", "JavaScript","React","GitHub", "Firebase", "Vercel"]
-    },
-    {
-        "id":2,
         "image":`${mundoBebe}`,
         "name": "Mundo Bebe",
         "description": "Sistema de gestión interna para control de ventas, stock y cambios. Optimiza la postventa mediante la generación automática de Notas de Crédito en PDF con detalles de artículos devueltos. Sus fortalezas radican en la trazabilidad total de operaciones de caja, registro histórico de vendedores y una interfaz intuitiva que agiliza la resolución de saldos a favor del cliente.",
         "link": "https://mundo-bebe.vercel.app/",
         "technologies": ["HTML","CSS", "JavaScript","React","GitHub", "Supabase", "Vercel"]
+    },
+    {
+        "id":2,
+        "image":`${distribuidoraDeLaCosta}`,
+        "name": "Distribuidora de La Costa",
+        "description": "E-comerce para distibuidora. Renderiza el catálogo de artículos, los separa por categoria o producto especifico. Gestiona la realizacion de pedidos para mayor comodidad de los clientes, implementando Firebase como base de datos.",
+        "link": "https://distribuidora-de-la-costa-react-667.vercel.app/",
+        "technologies": ["HTML","CSS", "JavaScript","React","GitHub", "Firebase", "Vercel"]
     },
     {
         "id":3,
