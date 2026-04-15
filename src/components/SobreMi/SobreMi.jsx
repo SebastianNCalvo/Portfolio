@@ -3,6 +3,7 @@ import DesarrolloWeb from '../../assets/DesarrolloWeb.png';
 import Javascript from '../../assets/Javascript.png';
 import ReactJs from '../../assets/Certificado-ReactJs.png';
 import BDSQL from '../../assets/BDSQL.png';
+import Backend from '../../assets/Backend.png'
 
 export default function SobreMi() {
     return (
@@ -40,6 +41,10 @@ export default function SobreMi() {
                     <div className='cardCertificado'>
                         <img src={BDSQL} alt="Certificado Base de Datos SQL" />
                         <span>Bases de Datos SQL</span>
+                    </div>
+                    <div className='cardCertificado'>
+                        <img src={Backend} alt="Certificado Backend 1" />
+                        <span>Backend 1 - Construcción de API</span>
                     </div>
                 </div>
             </div>
